@@ -68,6 +68,7 @@ class TestFriends < MiniTest::Test
   end
 
   # 1. For a given person, return their name
+
   def test_getting_name
     result = get_name(@person5)
     assert_equal("Daphne", result)
@@ -75,6 +76,7 @@ class TestFriends < MiniTest::Test
 
   # 2. For a given person, return their favourite tv show
   # (e.g. the function favourite_tv_show(@person2) should return the string "Baywatch")
+
   def test_getting_tv_show
     result = get_tv_show(@person2)
     assert_equal("Baywatch", result)
@@ -82,6 +84,7 @@ class TestFriends < MiniTest::Test
 
   # 3. For a given person, check if they like a particular food
   # (e.g. the function likes_to_eat(@person2, "bread") should return true, likes_to_eat(@person3, "spinach") should return false)
+
   def test_likes_to_eat
     result = likes_to_eat(@person2, "bread")
     assert_equal(true, result)
@@ -114,21 +117,23 @@ end
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
+
 def test_loan_monies
   loan_monies(@person1, @person2, 1)
   assert_equal(0, @person1[:monies])
   assert_equal(3, @person2[:monies])
 end
 
-
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
+
 def test_food_join
   result = food_join(@people)
   assert_equal(["charcuterie","soup","bread","Scooby snacks","spaghetti", "ratatouille","spinach"], result)
 end
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
+
 def test_no_friends
   result = no_friends(@people)
   assert_equal(["Daphne"],result)

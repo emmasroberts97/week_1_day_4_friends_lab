@@ -33,9 +33,8 @@ def add_money(people)
 end
 
 def loan_monies(lender, leanee, money)
-  leanee[:monies] = leanee[:monies] + money
-  lender[:monies] = lender[:monies] - money
-  return lender[:monies]
+  leanee[:monies] += money
+  lender[:monies] -= money
 end
 
 def food_join(people)
