@@ -16,12 +16,10 @@ end
 
 def add_friend(person, friend)
   person[:friends].push(friend)
-  return person[:friends].count
 end
 
 def remove_friend(person, friend)
   person[:friends].delete(friend)
-  return person[:friends].count
 end
 
 def add_money(people)
